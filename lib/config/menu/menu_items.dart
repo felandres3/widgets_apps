@@ -16,15 +16,15 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
-    title: 'Counter',
-    subtitle: "Lecciones",
-    link: '/counter',
-    icon: Icons.add,
+    title: 'Lecciones',
+    subtitle: "Son las lecciones que tomaras para aprender",
+    link: '/lessons',
+    icon: Icons.book,
   ),
   MenuItem(
-    title: 'Settings',
-    subtitle: "Cuenta",
-    link: '/settings',
-    icon: Icons.settings,
+    title: 'Cuenta',
+    subtitle: "Información de tu cuenta",
+    link: '/account',
+    icon: Icons.account_circle,
   ),
 ];

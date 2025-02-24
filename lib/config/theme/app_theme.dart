@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const colorsList = <Color>[
   Colors.red,
   Colors.green,
-  Colors.blue, 
+  Colors.blue,
   Colors.purple,
   Colors.orange,
 ];
@@ -11,15 +11,17 @@ const colorsList = <Color>[
 class AppTheme {
   final int selectedColor;
 
-  AppTheme({this.selectedColor = 0}): assert(selectedColor >= 0 && selectedColor < colorsList.length);
+  AppTheme({this.selectedColor = 0})
+    : assert(selectedColor >= 0 && selectedColor < colorsList.length);
 
-  ThemeData getTheme() => ThemeData( 
+  ThemeData getTheme() => ThemeData(
     useMaterial3: true,
     colorSchemeSeed: colorsList[selectedColor],
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.black,
+    appBarTheme:  AppBarTheme(
+      // backgroundColor: theme primary
+      backgroundColor: colorsList[selectedColor],
       foregroundColor: Colors.white,
-      centerTitle: true
+      centerTitle: true,
     ),
   );
 }
